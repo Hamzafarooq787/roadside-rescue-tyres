@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import { ReactNode } from "react";
 
 interface StaggerContainerProps {
@@ -16,6 +16,7 @@ export default function StaggerContainer({
   delay = 0,
   staggerDelay = 0.1,
 }: StaggerContainerProps) {
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,7 +33,10 @@ export default function StaggerContainer({
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: {
+        duration: 0.5,
+        ease: easeOut,
+      },
     },
   };
 
