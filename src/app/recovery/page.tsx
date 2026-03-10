@@ -2,39 +2,33 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Header from '@/layout/header';
 import Footer from '@/layout/footer';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+import CookieConsent from '@/components/CookieConsent'; // adjust path
+import { Car, Truck, Timer, Award, Wrench, Phone, MapPin } from 'lucide-react';
+
+// Tyre icon component (reused)
+function TyreIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="3" />
+      <path d="M12 3 L12 7 M12 17 L12 21 M3 12 L7 12 M17 12 L21 12" />
+    </svg>
+  );
+}
 
 export default function RecoveryPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  const testimonials = [
-    {
-      name: 'Marek Minárik',
-      text: 'Hi, leaving the review a bit late, sorry had a lot to catch up with. Nevertheless, the service was great, communication too, while waiting for the van and a quick tyre replacement on the spot. The usual big companies would have me wait til next day, but Roadside Rescue Tyres came right away. Thank you. Blue Mazda in Shefford.',
-    },
-    {
-      name: 'Hannah Luttrell',
-      text: "If I could give more than 5 stars on this review, then I definitely would! I was so anxious having to call someone out to fix my tyre, especially as a woman on the road alone, but I'm so glad I called them. The customer service was wonderful, I felt instantly at ease, the service provided was smooth and quick, and the communication was fantastic. I can not recommend this company enough!",
-    },
-    {
-      name: 'Husna Khan',
-      text: 'I recently had a breakdown on the side of the road, it was a stressful situation. Fortunately, the team from Roadside Rescue Tyres came to my rescue. They arrived quickly, were incredibly professional, and made me feel at ease right away. The tyre was replaced efficiently, and they took the time to ensure everything was safe before I continued my journey. Their kindness and expertise made all the difference. Highly recommend them for their excellent service!',
-    },
-  ];
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
   // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -67,7 +61,7 @@ export default function RecoveryPage() {
       initial="hidden"
       animate="visible"
       exit={{ opacity: 0 }}
-      className="min-h-screen font-sans antialiased bg-dark"
+      className="min-h-screen bg-[#0a1f1e]" // dark teal background
     >
       <Header />
 
@@ -78,10 +72,10 @@ export default function RecoveryPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="relative text-text-primary"
+          className="relative text-white"
         >
           {/* Background overlay */}
-          <div className="absolute inset-0 bg-dark/80 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a2a28] via-[#0a2a28]/90 to-transparent z-10" />
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
@@ -106,55 +100,59 @@ export default function RecoveryPage() {
                 <motion.div
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.6 }}
-                  className="w-24 h-24 bg-brand-primary rounded-full flex items-center justify-center text-dark font-bold"
+                  className="w-24 h-24 bg-[#00E0C6] rounded-full flex items-center justify-center text-black font-bold shadow-lg"
                 >
-                  <span className="text-3xl font-bold">RRT</span>
+                  <span className="text-3xl font-bold">RECOVERY</span>
                 </motion.div>
               </motion.div>
-              <motion.h1 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4">
+              <motion.h1 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4 drop-shadow-lg">
                 24/7 Nationwide Vehicle Recovery – Fast, Reliable, Anywhere!
               </motion.h1>
-              <motion.p variants={fadeInUp} className="text-lg mb-6 text-text-secondary">
+              <motion.p variants={fadeInUp} className="text-lg mb-6 text-gray-300">
                 24/7 Mobile Tyre & Vehicle Recovery – Wherever You Need, Whenever You Need! Swift,
                 professional service to keep you moving without delay.
               </motion.p>
-              <motion.h2 variants={fadeInUp} className="text-xl md:text-2xl font-semibold text-brand-primary">
+              <motion.h2 variants={fadeInUp} className="text-xl md:text-2xl font-semibold text-[#00E0C6]">
                 EMERGENCY MOBILE TYRE FITTING & VEHICLE RECOVERY NATIONWIDE
               </motion.h2>
             </motion.div>
 
-            {/* Right Column */}
+            {/* Right Column - Form Card */}
             <motion.div
               variants={scaleIn}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
-              className="bg-dark-card border border-border-subtle p-6 rounded-lg text-center"
+              className="bg-[#15312e] border border-[#00E0C6]/30 p-6 rounded-2xl shadow-2xl text-center"
             >
-              <h2 className="text-2xl font-bold mb-2 text-text-primary">Stranded? We’ve Got You Covered!</h2>
-              <p className="text-brand-primary font-semibold mb-4">CALL US NOW</p>
+              <h2 className="text-2xl font-bold mb-2 text-white">Stranded? We’ve Got You Covered!</h2>
+              <p className="text-[#00E0C6] font-semibold mb-4 flex items-center justify-center gap-2">
+                <Phone size={18} /> CALL US NOW
+              </p>
               <motion.a
-                whileHover={{ scale: 1.05, backgroundColor: '#00BFA6' }}
+                whileHover={{ scale: 1.05, backgroundColor: '#00B3A0' }}
                 whileTap={{ scale: 0.95 }}
                 href="tel:03335778247"
-                className="block w-full bg-brand-primary text-dark font-bold py-3 px-6 rounded-lg transition mb-4"
+                className="block w-full bg-[#00E0C6] text-black font-bold py-3 px-6 rounded-lg transition mb-4 shadow-lg"
               >
                 0333 577 8247
               </motion.a>
-              <p className="text-sm mb-2 text-text-muted">ENTER YOUR POSTCODE OR LOCATION</p>
+              <p className="text-sm mb-2 text-gray-400 flex items-center justify-center gap-1">
+                <MapPin size={16} className="text-[#00E0C6]" /> ENTER YOUR POSTCODE OR LOCATION
+              </p>
               <form className="space-y-3">
                 <motion.input
                   whileFocus={{ scale: 1.02, borderColor: '#00E0C6' }}
                   type="text"
                   placeholder="Postcode or location"
-                  className="w-full px-4 py-2 rounded-lg bg-dark-card border border-border-subtle text-text-primary placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-brand-primary"
+                  className="w-full px-4 py-2 rounded-lg bg-[#0a2a28] border border-[#00E0C6]/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00E0C6]"
                 />
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   type="submit"
-                  className="w-full bg-brand-primary hover:bg-brand-accent text-dark font-bold py-2 px-4 rounded-lg transition"
+                  className="w-full bg-[#00E0C6] hover:bg-[#00B3A0] text-black font-bold py-2 px-4 rounded-lg transition shadow-lg"
                 >
                   SUBMIT
                 </motion.button>
@@ -169,20 +167,28 @@ export default function RecoveryPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="py-16 bg-gradient-teal text-dark"
+          className="py-16 bg-[#0a2a28] relative overflow-hidden"
         >
-          <div className="container mx-auto px-4">
+          {/* Background tyre icons */}
+          <div className="absolute inset-0 opacity-10">
+            <TyreIcon className="absolute top-10 left-10 w-24 h-24 text-[#00E0C6]" />
+            <TyreIcon className="absolute bottom-10 right-10 w-32 h-32 text-[#00E0C6]" />
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
             <motion.h2
               variants={fadeInUp}
-              className="text-3xl md:text-4xl font-bold text-center mb-12"
+              className="text-3xl md:text-4xl font-bold text-center mb-12 text-white"
             >
-              OUR SERVICES
+              <span className="bg-[#00E0C6] text-black px-8 py-3 rounded-full inline-block shadow-xl">
+                OUR SERVICES
+              </span>
             </motion.h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <motion.div
                 variants={scaleIn}
                 whileHover={{ scale: 1.02 }}
-                className="relative h-64 md:h-96 rounded-lg overflow-hidden"
+                className="relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl border border-[#00E0C6]/30"
               >
                 <Image
                   src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80"
@@ -190,19 +196,21 @@ export default function RecoveryPage() {
                   fill
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a2a28] to-transparent"></div>
+                <Car className="absolute bottom-4 left-4 text-[#00E0C6] w-12 h-12 opacity-50" />
               </motion.div>
               <motion.div variants={staggerChildren} className="text-center md:text-left">
-                <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-bold mb-4">
+                <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-bold mb-4 text-white">
                   VEHICLE RECOVERY NATIONWIDE
                 </motion.h3>
-                <motion.p variants={fadeInUp} className="text-lg mb-6 text-text-secondary">
+                <motion.p variants={fadeInUp} className="text-lg mb-6 text-gray-300">
                   Fast and reliable nationwide vehicle recovery, 24/7 assistance wherever you need.
                 </motion.p>
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   href="tel:03335778247"
-                  className="inline-block bg-dark hover:bg-dark-card text-brand-primary font-bold py-3 px-8 rounded-lg transition border border-brand-primary"
+                  className="inline-block bg-[#00E0C6] hover:bg-[#00B3A0] text-black font-bold py-3 px-8 rounded-full transition shadow-lg border-2 border-transparent hover:border-white"
                 >
                   BOOK NOW
                 </motion.a>
@@ -217,14 +225,14 @@ export default function RecoveryPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="py-12 bg-dark-soft"
+          className="py-12 bg-[#0a1f1e]"
         >
           <div className="container mx-auto px-4">
             <motion.h2
               variants={fadeInUp}
-              className="text-3xl md:text-4xl font-bold text-center text-text-primary"
+              className="text-3xl md:text-4xl font-bold text-center text-white"
             >
-              We specialise in
+              <span className="border-b-4 border-[#00E0C6] pb-2">We specialise in</span>
             </motion.h2>
           </div>
         </motion.section>
@@ -235,14 +243,14 @@ export default function RecoveryPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="py-12 bg-dark"
+          className="py-12 bg-[#0a2a28]"
         >
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <motion.div variants={staggerChildren} className="order-2 md:order-1">
-              <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-bold mb-4 text-text-primary">
-                Rapid Response
+              <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-bold mb-4 text-white flex items-center gap-2">
+                <Timer className="text-[#00E0C6]" /> Rapid Response
               </motion.h3>
-              <motion.p variants={fadeInUp} className="text-text-secondary mb-4">
+              <motion.p variants={fadeInUp} className="text-gray-300 mb-4">
                 We understand that your time is precious. That’s why we guarantee a rapid response,
                 typically arriving in under 45 minutes, ensuring minimal disruption to your day.
                 Choose us for roadside assistance, rest assured that your time matters – we’re here
@@ -252,7 +260,7 @@ export default function RecoveryPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="tel:03335778247"
-                className="inline-block bg-brand-primary hover:bg-brand-accent text-dark font-bold py-3 px-8 rounded-lg transition"
+                className="inline-block bg-[#00E0C6] hover:bg-[#00B3A0] text-black font-bold py-3 px-8 rounded-full transition shadow-lg"
               >
                 BOOK NOW
               </motion.a>
@@ -260,7 +268,7 @@ export default function RecoveryPage() {
             <motion.div
               variants={scaleIn}
               whileHover={{ scale: 1.02 }}
-              className="order-1 md:order-2 relative h-64 md:h-96 rounded-lg overflow-hidden"
+              className="order-1 md:order-2 relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl border border-[#00E0C6]/30"
             >
               <Image
                 src="/15.png"
@@ -268,6 +276,8 @@ export default function RecoveryPage() {
                 fill
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a2a28] to-transparent"></div>
+              <Timer className="absolute bottom-4 right-4 text-[#00E0C6] w-12 h-12 opacity-50" />
             </motion.div>
           </div>
         </motion.section>
@@ -278,13 +288,13 @@ export default function RecoveryPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="py-12 bg-dark-soft"
+          className="py-12 bg-[#0a1f1e]"
         >
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <motion.div
               variants={scaleIn}
               whileHover={{ scale: 1.02 }}
-              className="relative h-64 md:h-96 rounded-lg overflow-hidden"
+              className="relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl border border-[#00E0C6]/30"
             >
               <Image
                 src="/National-Recovery.jpg"
@@ -292,12 +302,14 @@ export default function RecoveryPage() {
                 fill
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1f1e] to-transparent"></div>
+              <Award className="absolute bottom-4 left-4 text-[#00E0C6] w-12 h-12 opacity-50" />
             </motion.div>
             <motion.div variants={staggerChildren}>
-              <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-bold mb-4 text-text-primary">
-                National Recovery
+              <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-bold mb-4 text-white flex items-center gap-2">
+                <Award className="text-[#00E0C6]" /> National Recovery
               </motion.h3>
-              <motion.p variants={fadeInUp} className="text-text-secondary mb-4">
+              <motion.p variants={fadeInUp} className="text-gray-300 mb-4">
                 If you break down or had an accident and need recovery. We’ll take your vehicle to
                 any UK destination.
               </motion.p>
@@ -305,7 +317,7 @@ export default function RecoveryPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="tel:03335778247"
-                className="inline-block bg-brand-primary hover:bg-brand-accent text-dark font-bold py-3 px-8 rounded-lg transition"
+                className="inline-block bg-[#00E0C6] hover:bg-[#00B3A0] text-black font-bold py-3 px-8 rounded-full transition shadow-lg"
               >
                 BOOK NOW
               </motion.a>
@@ -319,14 +331,14 @@ export default function RecoveryPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="py-12 bg-dark"
+          className="py-12 bg-[#0a2a28]"
         >
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <motion.div variants={staggerChildren} className="order-2 md:order-1">
-              <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-bold mb-4 text-text-primary">
-                Transporting
+              <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-bold mb-4 text-white flex items-center gap-2">
+                <Wrench className="text-[#00E0C6]" /> Transporting
               </motion.h3>
-              <motion.p variants={fadeInUp} className="text-text-secondary mb-4">
+              <motion.p variants={fadeInUp} className="text-gray-300 mb-4">
                 Need help transporting your vehicle from an auction site or collection, we are here
                 to help nationwide.
               </motion.p>
@@ -334,7 +346,7 @@ export default function RecoveryPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="tel:03335778247"
-                className="inline-block bg-brand-primary hover:bg-brand-accent text-dark font-bold py-3 px-8 rounded-lg transition"
+                className="inline-block bg-[#00E0C6] hover:bg-[#00B3A0] text-black font-bold py-3 px-8 rounded-full transition shadow-lg"
               >
                 BOOK NOW
               </motion.a>
@@ -342,7 +354,7 @@ export default function RecoveryPage() {
             <motion.div
               variants={scaleIn}
               whileHover={{ scale: 1.02 }}
-              className="order-1 md:order-2 relative h-64 md:h-96 rounded-lg overflow-hidden"
+              className="order-1 md:order-2 relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl border border-[#00E0C6]/30"
             >
               <Image
                 src="/Transporting.jfif"
@@ -350,69 +362,20 @@ export default function RecoveryPage() {
                 fill
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a2a28] to-transparent"></div>
+              <Truck className="absolute bottom-4 right-4 text-[#00E0C6] w-12 h-12 opacity-50" />
             </motion.div>
           </div>
         </motion.section>
 
         {/* Testimonials */}
-                <TestimonialsCarousel />
-        
+        <TestimonialsCarousel />
       </main>
 
       <Footer />
 
-      {/* Floating WhatsApp Button */}
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 1 }}
-        className="fixed bottom-4 right-4 z-50"
-      >
-        <motion.a
-          whileHover={{ scale: 1.2, rotate: 10 }}
-          whileTap={{ scale: 0.9 }}
-          href="https://wa.me/+447415733992"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition"
-          aria-label="Chat on WhatsApp"
-        >
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.96.57 3.87 1.65 5.52L2.1 21.9l4.59-1.48c1.6.98 3.45 1.5 5.35 1.5 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm.01 18.08c-1.47 0-2.92-.39-4.18-1.13l-.3-.18-2.82.91.9-2.73-.19-.31c-.81-1.32-1.24-2.86-1.24-4.43 0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.2-8.2 8.2zm4.5-6.14c-.25-.12-1.48-.73-1.71-.81-.23-.08-.4-.12-.57.12-.17.24-.66.81-.81.98-.15.17-.3.19-.55.07-.96-.44-1.59-.78-2.21-1.54-.17-.2-.18-.31-.26-.5-.08-.19-.01-.3.06-.4.06-.09.13-.21.19-.32.06-.1.09-.18.13-.3.04-.12 0-.23-.02-.32-.02-.09-.17-.41-.39-.67-.22-.26-.47-.36-.68-.47-.2-.11-.43-.12-.59-.12h-.55c-.17 0-.45.06-.68.32-.23.26-.88.86-.88 2.1 0 1.24.91 2.44 1.04 2.61.13.17 1.79 2.73 4.34 3.74.61.24 1.08.39 1.45.5.61.18 1.16.15 1.6.09.49-.07 1.48-.6 1.69-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.18-.47-.3z" />
-          </svg>
-        </motion.a>
-      </motion.div>
-
-      {/* Cookie Consent Banner */}
-      <motion.div
-        initial={{ y: 100 }}
-        animate={{ y: 0 }}
-        transition={{ type: 'spring', stiffness: 100, delay: 0.5 }}
-        className="fixed bottom-0 left-0 right-0 bg-dark-card border-t border-border-subtle text-text-primary p-4 flex flex-col md:flex-row justify-between items-center z-40"
-      >
-        <p className="text-sm mb-2 md:mb-0 text-text-secondary">
-          We use cookies to ensure you have the best experience. By clicking ‘Accept,’ you agree to
-          our use of cookies. For more information, visit our privacy policy.
-        </p>
-        <div className="flex space-x-3">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-brand-primary hover:bg-brand-accent text-dark px-4 py-2 rounded-lg text-sm font-semibold"
-          >
-            ACCEPT
-          </motion.button>
-          <Link href="/privacy-policy">
-            <motion.span
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block bg-dark-soft hover:bg-dark-card text-text-secondary px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer border border-border-subtle"
-            >
-              REJECT
-            </motion.span>
-          </Link>
-        </div>
-      </motion.div>
+      {/* Cookie Consent - reusable component */}
+      <CookieConsent />
     </motion.div>
   );
 }

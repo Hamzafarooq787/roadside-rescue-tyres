@@ -745,3 +745,120 @@ transform:translateY(0px);
 .animate-float-icon {
   animation: float-icon 3s ease-in-out infinite;
 }
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes vanMove {
+  0% { transform: translateX(-20px); opacity: 0.8; }
+  50% { transform: translateX(10px); opacity: 1; }
+  100% { transform: translateX(-20px); opacity: 0.8; }
+}
+
+/* Utility classes */
+.animate-fadeUp {
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0; /* start hidden */
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+.animate-slideLeft {
+  animation: slideInLeft 0.8s ease forwards;
+  opacity: 0;
+}
+
+.animate-slideRight {
+  animation: slideInRight 0.8s ease forwards;
+  opacity: 0;
+}
+
+.animate-van {
+  animation: vanMove 4s infinite ease-in-out;
+}
+
+/* Delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Mobile optimisations – reduce motion if user prefers */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fadeUp,
+  .animate-fadeIn,
+  .animate-slideLeft,
+  .animate-slideRight,
+  .animate-van {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Add to your globals.css */
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Initial hidden state for elements to be animated */
+.animate-on-enter {
+  opacity: 0;
+}
+
+/* When in view, make visible (the animation class is added separately) */
+.animate-in-view {
+  /* This class just ensures the element is visible; animation is handled by .animate-fade-in-up */
+  opacity: 1;
+}

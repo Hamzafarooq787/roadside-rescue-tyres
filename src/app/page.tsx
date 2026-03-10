@@ -11,6 +11,7 @@ import CTA from '@/components/CTA'
 import SpecialiseSection from '@/components/SpecialiseSection'
 import Header from '@/layout/header'
 import Footer from '@/layout/footer'
+import CookieConsent from '@/components/CookieConsent'
 
 export default function Home() {
   return (
@@ -166,6 +167,7 @@ export default function Home() {
 
       <Footer />
       <WhatsAppButton />
+      <CookieConsent/>
     </>
   )
 }
