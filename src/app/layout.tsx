@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
 
       <body
-        className="antialiased"
+        className="antialiased bg-[#102122] text-[#e0f7fa]"
         itemScope
         itemType="https://schema.org/WebPage"
       >

@@ -23,9 +23,9 @@ export default function Home() {
         <Hero />
 
         {/* Tyre Issues Section */}
-        <section className="py-20 bg-black text-center text-white overflow-hidden">
+        <section className="py-20 bg-[#102122] text-center text-white overflow-hidden">
 
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#1FE0C6] tracking-wider animate-fadeUp">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#25E2F4] tracking-wider animate-fadeUp">
             TYRE ISSUES? WE'VE GOT YOU COVERED!
           </h2>
 
@@ -42,7 +42,7 @@ export default function Home() {
         <section className="w-full flex flex-col md:flex-row">
 
           {/* LEFT SIDE */}
-          <div className="w-full md:w-1/2 bg-[#20D6C2] flex items-center justify-center py-16">
+          <div className="w-full md:w-1/2 bg-[#25E2F4] flex items-center justify-center py-16">
 
             <Image
               src="/Mobile-Tyres2.webp"
@@ -56,11 +56,11 @@ export default function Home() {
 
 
           {/* RIGHT SIDE */}
-          <div className="w-full md:w-1/2 bg-black flex items-center justify-center py-16">
+          <div className="w-full md:w-1/2 bg-[#102122] flex items-center justify-center py-16">
 
             <div className="text-center text-white max-w-md">
 
-              <h2 className="text-3xl md:text-4xl font-bold text-[#20D6C2] mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#25E2F4] mb-6">
                 45-60 MINUTE ARRIVAL
                 <br />
                 (NATIONWIDE)
@@ -72,7 +72,7 @@ export default function Home() {
 
               <a
                 href="tel:03335778247"
-                className="block bg-[#20D6C2] text-black font-bold py-3 mb-6 hover:scale-105 transition"
+                className="block bg-[#25E2F4] text-black font-bold py-3 mb-6 hover:scale-105 transition"
               >
                 0333 577 8247
               </a>
@@ -84,10 +84,10 @@ export default function Home() {
               <input
                 type="text"
                 placeholder=""
-                className="w-full mb-4 px-4 py-3 text-black"
+                className="w-full mb-4 px-4 py-3 text-black border-2 border-[#25E2F4]"
               />
 
-              <button className="w-full bg-[#20D6C2] text-black py-3 font-semibold hover:scale-105 transition">
+              <button className="w-full bg-[#25E2F4] text-black py-3 font-semibold hover:scale-105 transition">
                 SUBMIT
               </button>
 
