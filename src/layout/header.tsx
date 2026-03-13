@@ -39,8 +39,8 @@ export default function Header() {
               href={link.href}
               className={`pb-1 border-b-2 transition ${
                 pathname === link.href
-                ? "border-[#19d1bf]"
-                : "border-transparent hover:border-[#19d1bf]"
+                ? "border-[#8AE600]"
+                : "border-transparent hover:border-[#8AE600]"
               }`}
             >
               {link.name}
@@ -64,14 +64,14 @@ export default function Header() {
       {/* MOBILE MENU */}
       {open && (
 
-        <div className="md:hidden bg-black text-white flex flex-col items-center gap-8 py-10">
+        <div className="md:hidden bg-[#0A0A0A] text-white flex flex-col items-center gap-8 py-10">
 
           {navLinks.map((link)=>(
             <Link
               key={link.href}
               href={link.href}
               onClick={()=>setOpen(false)}
-              className="hover:text-[#19d1bf]"
+              className="hover:text-[#8AE600]"
             >
               {link.name}
             </Link>

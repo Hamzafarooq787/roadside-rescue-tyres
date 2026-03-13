@@ -58,7 +58,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer ref={footerRef} className="relative bg-[#0a0f0f] text-gray-300 overflow-hidden">
+    <footer ref={footerRef} className="relative bg-[#0A0A0A] text-gray-300 overflow-hidden">
       {/* Subtle background tyre pattern */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
         <TyreIcon className="absolute top-1/2 left-1/4 w-24 h-24 text-white rotate-12" />
@@ -75,7 +75,7 @@ export default function Footer() {
             style={{ animationDelay: '0.1s' }}
           >
             <div className="flex items-center gap-2">
-              <div className="w-12 h-12 bg-[#00E0C6] rounded-xl flex items-center justify-center text-black font-bold text-2xl shadow-lg">
+              <div className="w-12 h-12 bg-[#8AE600] rounded-xl flex items-center justify-center text-black font-bold text-2xl shadow-lg">
                 RRT
               </div>
               <span className="text-xl font-bold text-white">Roadside Rescue</span>
@@ -128,9 +128,9 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="flex items-center gap-2 text-gray-400 hover:text-[#00E0C6] transition-colors group"
+                    className="flex items-center gap-2 text-gray-400 hover:text-[#8AE600] transition-colors group"
                   >
-                    <ChevronRight size={16} className="text-gray-500 group-hover:text-[#00E0C6] group-hover:translate-x-1 transition-all" />
+                    <ChevronRight size={16} className="text-gray-500 group-hover:text-[#8AE600] group-hover:translate-x-1 transition-all" />
                     {link.name}
                   </Link>
                 </li>
@@ -147,13 +147,13 @@ export default function Footer() {
           >
             <h4 className="text-lg font-bold text-white">Locations</h4>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#1a1f1f] rounded-lg flex items-center justify-center text-gray-300">
+              <div className="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center text-gray-300">
                 <MapPin size={20} />
               </div>
               <span className="text-gray-300">Nationwide Coverage</span>
             </div>
             <div className="pt-4 border-t border-gray-800">
-              <h4 className="text-sm font-semibold text-[#00E0C6] uppercase tracking-wider mb-2">
+              <h4 className="text-sm font-semibold text-[#8AE600] uppercase tracking-wider mb-2">
                 Company Reg
               </h4>
               <p className="text-gray-400">16163981</p>
@@ -173,10 +173,10 @@ export default function Footer() {
                 href="tel:03335778247"
                 className="flex items-center gap-3 group"
               >
-                <div className="w-10 h-10 bg-[#1a1f1f] rounded-lg flex items-center justify-center text-gray-300 group-hover:bg-[#00E0C6] group-hover:text-black transition-all">
+                <div className="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center text-gray-300 group-hover:bg-[#8AE600] group-hover:text-black transition-all">
                   <Phone size={20} />
                 </div>
-                <span className="text-gray-300 group-hover:text-[#00E0C6] transition-colors">
+                <span className="text-gray-300 group-hover:text-[#8AE600] transition-colors">
                   0333 577 8247
                 </span>
               </a>
@@ -184,10 +184,10 @@ export default function Footer() {
                 href="mailto:support@mobiletyresnationwide.co.uk"
                 className="flex items-center gap-3 group break-all"
               >
-                <div className="w-10 h-10 bg-[#1a1f1f] rounded-lg flex items-center justify-center text-gray-300 group-hover:bg-[#00E0C6] group-hover:text-black transition-all">
+                <div className="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center text-gray-300 group-hover:bg-[#8AE600] group-hover:text-black transition-all">
                   <Mail size={20} />
                 </div>
-                <span className="text-gray-300 group-hover:text-[#00E0C6] transition-colors text-sm">
+                <span className="text-gray-300 group-hover:text-[#8AE600] transition-colors text-sm">
                   support@mobiletyresnationwide.co.uk
                 </span>
               </a>
@@ -197,10 +197,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar (unchanged) */}
-      <div className="relative z-10 border-t border-gray-800 bg-[#050808]">
+      <div className="relative z-10 border-t border-gray-800 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <p>© {new Date().getFullYear()} Mobile Tyres Nationwide. All rights reserved.</p>
-          <Link href="/terms" className="hover:text-[#00E0C6] transition-colors">
+          <Link href="/terms" className="hover:text-[#8AE600] transition-colors">
             Terms & Conditions
           </Link>
         </div>

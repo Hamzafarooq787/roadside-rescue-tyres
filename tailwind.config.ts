@@ -10,31 +10,31 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          primary: "#00E0C6",   // neon teal (main color in headings & highlights)
-          secondary: "#1ED4B5", // lighter teal
-          accent: "#00BFA6",    // darker teal for hover
+          primary: "#8AE600",   // lime green (main color in headings & highlights)
+          secondary: "#72BE00", // darker lime for hover
+          accent: "#067A63",    // teal accent for secondary buttons
         },
 
         dark: {
-          DEFAULT: "#000000",   // main background
-          soft: "#1a1a1a",      // sections
-          card: "#111111",      // cards
+          DEFAULT: "#0A0A0A",   // header/footer background
+          soft: "#111111",      // sections
+          card: "#1a1a1a",      // cards
         },
 
         text: {
-          primary: "#ffffff",
-          secondary: "#d1d5db",
-          muted: "#9ca3af",
+          primary: "#111111",
+          secondary: "#444444",
+          muted: "#666666",
         },
 
         border: {
-          subtle: "#2a2a2a",
+          subtle: "#e0e0e0",
         },
       },
 
       backgroundImage: {
-        "gradient-teal":
-          "linear-gradient(135deg, #00E0C6 0%, #00BFA6 100%)",
+        "gradient-brand":
+          "linear-gradient(135deg, #8AE600 0%, #72BE00 100%)",
       },
 
       animation: {

@@ -28,7 +28,7 @@ export default function TestimonialsCarousel() {
     <section ref={sectionRef}>
       {/* Title bar with fade-down animation */}
       <div
-        className={`bg-[#19d1bf] py-10 animate-on-enter ${
+        className={`bg-[#8AE600] py-10 animate-on-enter ${
           isInView ? 'animate-in-view animate-fade-in-down' : ''
         }`}
       >
@@ -47,7 +47,7 @@ export default function TestimonialsCarousel() {
 
         <div className="relative max-w-4xl mx-auto text-center text-white px-6">
           {/* Quote icon with continuous float animation */}
-          <div className="text-7xl mb-6 text-[#19d1bf] animate-float-icon">
+          <div className="text-7xl mb-6 text-[#8AE600] animate-float-icon">
             “
           </div>
 

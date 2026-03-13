@@ -40,7 +40,7 @@ export default function CookieConsent() {
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
           className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6"
         >
-          <div className="relative mx-auto max-w-7xl bg-[#15312e] border border-[#00E0C6]/30 rounded-2xl shadow-2xl p-4 md:p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="relative mx-auto max-w-7xl bg-[#0A0A0A] border border-[#8AE600]/30 rounded-2xl shadow-2xl p-4 md:p-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <button
               onClick={handleClose}
               className="absolute top-2 right-2 text-gray-400 hover:text-white transition"
@@ -56,7 +56,7 @@ export default function CookieConsent() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleAccept}
-                className="bg-[#00E0C6] hover:bg-[#00B3A0] text-black font-semibold px-6 py-2 rounded-full transition"
+                className="bg-[#8AE600] hover:bg-[#72BE00] text-black font-semibold px-6 py-2 rounded-full transition"
               >
                 ACCEPT
               </motion.button>
@@ -65,7 +65,7 @@ export default function CookieConsent() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleReject}
-                  className="inline-block cursor-pointer bg-transparent border border-[#00E0C6]/50 hover:border-[#00E0C6] text-gray-300 hover:text-white px-6 py-2 rounded-full transition"
+                  className="inline-block cursor-pointer bg-transparent border border-[#8AE600]/50 hover:border-[#8AE600] text-gray-300 hover:text-white px-6 py-2 rounded-full transition"
                 >
                   REJECT
                 </motion.span>

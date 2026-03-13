@@ -11,21 +11,21 @@
   :root {
 
     /* BRAND COLORS */
-    --primary: #00E0C6;
-    --primary-dark: #00BFA6;
+    --primary: #8AE600;
+    --primary-dark: #72BE00;
 
     /* BACKGROUNDS */
-    --background: #000000;
-    --background-soft: #0f0f0f;
-    --card: #171717;
+    --background: #FFFFFF;
+    --background-soft: #f5f5f5;
+    --card: #f0f0f0;
 
     /* TEXT */
-    --text-primary: #ffffff;
-    --text-secondary: #d1d5db;
-    --text-muted: #9ca3af;
+    --text-primary: #111111;
+    --text-secondary: #444444;
+    --text-muted: #666666;
 
     /* BORDER */
-    --border: #2a2a2a;
+    --border: #e0e0e0;
 
   }
 
@@ -37,10 +37,6 @@
     background: var(--background);
     color: var(--text-primary);
     font-family: system-ui, sans-serif;
-  }
-
-  section {
-    background: var(--background-soft);
   }
 
   a {
@@ -71,14 +67,6 @@
 
   .btn-primary:hover {
     background: var(--primary-dark);
-  }
-
-  /* Cards */
-
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    @apply rounded-xl p-6 shadow-lg;
   }
 
 }
@@ -303,8 +291,8 @@ transform:translateY(0px);
 }
 
 @keyframes glow {
-  0%, 100% { filter: drop-shadow(0 0 5px rgba(0, 255, 200, 0.3)); }
-  50% { filter: drop-shadow(0 0 20px rgba(0, 255, 200, 0.6)); }
+  0%, 100% { filter: drop-shadow(0 0 5px rgba(138, 230, 0, 0.3)); }
+  50% { filter: drop-shadow(0 0 20px rgba(138, 230, 0, 0.6)); }
 }
 
 @keyframes slideUp {
@@ -367,8 +355,8 @@ transform:translateY(0px);
   }
 }
 /* Optional: Enhance button glow on hover */
-.hover\:shadow-\[0_0_20px_\#10b981\]:hover {
-  box-shadow: 0 0 20px #10b981;
+.hover\:shadow-\[0_0_20px_\#8AE600\]:hover {
+  box-shadow: 0 0 20px #8AE600;
 }
 /* Existing animations... (keep them all) */
 

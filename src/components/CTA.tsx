@@ -16,7 +16,7 @@ export default function CTA() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-gradient-to-r from-gray-200 via-teal-200 to-teal-400 py-20"
+      className="w-full bg-gradient-to-r from-gray-100 via-[#8AE600]/20 to-[#8AE600]/40 py-20"
     >
       {/* Top Heading */}
       <div className={`text-center max-w-4xl mx-auto px-6 mb-14 animate-on-enter ${isInView ? 'animate-in-view animate-fade-in-down' : ''}`}>
@@ -49,7 +49,7 @@ export default function CTA() {
               size={40}
               className="mx-auto mb-6 text-black animate-float-icon group-hover:animate-spin-slow transition-all"
             />
-            <div className="bg-black text-white py-3 mb-6 text-sm tracking-widest hover:bg-teal-600 transition-colors">
+            <div className="bg-[#0A0A0A] text-white py-3 mb-6 text-sm tracking-widest hover:bg-[#067A63] transition-colors">
               {card.title}
             </div>
             <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
@@ -63,7 +63,7 @@ export default function CTA() {
       <div className={`text-center mt-14 animate-on-enter ${isInView ? 'animate-in-view animate-fade-in-up' : ''}`}>
         <a
           href="tel:03335778247"
-          className="bg-black text-white px-10 py-4 inline-block tracking-widest hover:scale-110 hover:bg-teal-700 hover:shadow-lg transition-all duration-300"
+          className="bg-[#0A0A0A] text-white px-10 py-4 inline-block tracking-widest hover:scale-110 hover:bg-[#067A63] hover:shadow-lg transition-all duration-300"
         >
           CALL US NOW
         </a>

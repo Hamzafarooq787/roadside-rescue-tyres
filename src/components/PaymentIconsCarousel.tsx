@@ -16,7 +16,7 @@ export default function PaymentIconsCarousel() {
   return (
     <section
       ref={sectionRef}
-      className="py-16 bg-gradient-to-r from-[#19d1bf] to-[#e4e4e4]"
+      className="py-16 bg-gradient-to-r from-[#8AE600] to-[#e4e4e4]"
     >
       <div className="max-w-[1100px] mx-auto px-6">
         {/* Heading with fade-down animation */}

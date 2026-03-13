@@ -31,7 +31,7 @@ export default function ServicesSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#18d6c2] py-20 overflow-hidden"
+      className="w-full bg-[#8AE600] py-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Title with fade-down animation */}
@@ -84,7 +84,7 @@ export default function ServicesSection() {
                   </p>
 
                   {/* Button with hover effect */}
-                  <button className="bg-black text-white px-10 py-3 tracking-widest transition-all duration-300 transform hover:scale-105 hover:bg-teal-700 hover:shadow-lg flex items-center justify-center gap-2 mx-auto group/btn">
+                  <button className="bg-[#0A0A0A] text-white px-10 py-3 tracking-widest transition-all duration-300 transform hover:scale-105 hover:bg-[#067A63] hover:shadow-lg flex items-center justify-center gap-2 mx-auto group/btn">
                     <span>BOOK NOW</span>
                     <Phone size={18} className="opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
                   </button>
