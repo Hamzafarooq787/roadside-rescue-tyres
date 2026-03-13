@@ -18,7 +18,7 @@ export default function Home() {
         <HeroSection />
 
         {/* Tyre Issues Section - with icons & animations */}
-        <section className="py-20 bg-gradient-to-b from-[#8AE600]/90 to-[#067A63] text-center text-white overflow-hidden relative">
+        <section className="py-20 bg-gradient-to-b from-[#25E2F4]/90 to-[#067A63] text-center text-white overflow-hidden relative">
           {/* decorative icons */}
           <div className="absolute top-10 left-5 md:left-20 text-white/20 animate-pulse">
             <Car size={80} />
@@ -41,7 +41,7 @@ export default function Home() {
         {/* Arrival Section */}
         <section className="w-full flex flex-col md:flex-row">
           {/* LEFT SIDE */}
-          <div className="w-full md:w-1/2 bg-[#8AE600] flex items-center justify-center py-16 relative overflow-hidden">
+          <div className="w-full md:w-1/2 bg-[#25E2F4] flex items-center justify-center py-16 relative overflow-hidden">
             <Image
               src="/Mobile-Tyres2.webp"
               alt="Roadside Rescue Tyres"
@@ -55,38 +55,38 @@ export default function Home() {
           </div>
 
           {/* RIGHT SIDE - replaced black with dark theme color */}
-          <div className="w-full md:w-1/2 bg-[#0A0A0A] flex items-center justify-center py-16 animate-fadeIn shadow-inner">
+          <div className="w-full md:w-1/2 bg-[#102122] flex items-center justify-center py-16 animate-fadeIn shadow-inner">
             <div className="text-center text-white max-w-md">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#8AE600] mb-6 animate-slideRight drop-shadow-md">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#25E2F4] mb-6 animate-slideRight drop-shadow-md">
                 45-60 MINUTE ARRIVAL
                 <br />
                 (NATIONWIDE)
               </h2>
 
               <p className="mb-4 tracking-wider text-gray-300 flex items-center justify-center gap-2">
-                <Phone className="text-[#8AE600]" size={20} />
+                <Phone className="text-[#25E2F4]" size={20} />
                 CALL US NOW
               </p>
 
               <a
                 href="tel:03335778247"
-                className="block bg-[#8AE600] text-black font-bold py-3 mb-6 hover:scale-105 transition transform duration-300 shadow-lg"
+                className="block bg-[#25E2F4] text-black font-bold py-3 mb-6 hover:scale-105 transition transform duration-300 shadow-lg"
               >
                 0333 577 8247
               </a>
 
               <p className="text-gray-300 mb-3 flex items-center justify-center gap-2">
-                <MapPin className="text-[#8AE600]" size={20} />
+                <MapPin className="text-[#25E2F4]" size={20} />
                 ENTER YOUR POSTCODE OR LOCATION
               </p>
 
               <input
                 type="text"
                 placeholder=""
-                className="w-full mb-4 px-4 py-3 text-black border-2 border-[#8AE600] focus:ring-2 focus:ring-[#8AE600]/50 outline-none shadow-md"
+                className="w-full mb-4 px-4 py-3 text-black border-2 border-[#25E2F4] focus:ring-2 focus:ring-[#25E2F4]/50 outline-none shadow-md"
               />
 
-                <button className="w-full bg-[#8AE600] text-black py-3 font-semibold hover:scale-105 transition transform duration-300 shadow-lg">
+                <button className="w-full bg-[#25E2F4] text-black py-3 font-semibold hover:scale-105 transition transform duration-300 shadow-lg">
                 SUBMIT
               </button>
             </div>
@@ -94,33 +94,33 @@ export default function Home() {
         </section>
 
         {/* OUR SERVICES - reduced black, added theme color background */}
-        <section className="bg-[#111111] py-16 relative overflow-hidden">
+        <section className="bg-[#132728] py-16 relative overflow-hidden">
           {/* Background tyre pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 left-10">
-              <TyreIcon className="w-24 h-24 text-[#8AE600]" />
+              <TyreIcon className="w-24 h-24 text-[#25E2F4]" />
             </div>
             <div className="absolute bottom-10 right-10">
-              <TyreIcon className="w-32 h-32 text-[#8AE600]" />
+              <TyreIcon className="w-32 h-32 text-[#25E2F4]" />
             </div>
             <div className="absolute top-1/2 left-1/4 -translate-y-1/2">
-              <TyreIcon className="w-20 h-20 text-[#8AE600] rotate-45" />
+              <TyreIcon className="w-20 h-20 text-[#25E2F4] rotate-45" />
             </div>
           </div>
 
           <div className="container relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white animate-fadeUp">
-              <span className="bg-[#8AE600] text-black px-8 py-3 rounded-full inline-block shadow-xl">
+              <span className="bg-[#25E2F4] text-black px-8 py-3 rounded-full inline-block shadow-xl">
                 OUR SERVICES
               </span>
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Service 1 */}
-              <div className="group relative bg-[#1a1a1a] rounded-2xl overflow-hidden border border-[#8AE600]/40 shadow-2xl hover:shadow-[#8AE600]/30 hover:shadow-2xl transition-all duration-500 animate-slideLeft">
+              <div className="group relative bg-[#1C3537] rounded-2xl overflow-hidden border border-[#25E2F4]/40 shadow-2xl hover:shadow-[#25E2F4]/30 hover:shadow-2xl transition-all duration-500 animate-slideLeft">
                 {/* Tyre icon background inside card */}
                 <div className="absolute -right-6 -top-6 opacity-20 group-hover:opacity-30 transition-opacity">
-                  <TyreIcon className="w-32 h-32 text-[#8AE600]" />
+                  <TyreIcon className="w-32 h-32 text-[#25E2F4]" />
                 </div>
 
                 <div className="relative h-64 w-full">
@@ -130,31 +130,31 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1C3537] via-transparent to-transparent"></div>
                   {/* Small icon overlay on image */}
-                  <div className="absolute bottom-4 left-4 bg-[#8AE600] p-2 rounded-full shadow-lg">
+                  <div className="absolute bottom-4 left-4 bg-[#25E2F4] p-2 rounded-full shadow-lg">
                     <Car className="text-black" size={24} />
                   </div>
                 </div>
 
                 <div className="p-6 relative">
                   <h3 className="text-2xl font-bold text-white mb-3 flex items-center gap-2">
-                    <TyreIcon className="w-6 h-6 text-[#8AE600]" />
+                    <TyreIcon className="w-6 h-6 text-[#25E2F4]" />
                     EMERGENCY MOBILE TYRE FITTING
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
                     Mobile tyre fitting for cars and vans—fast, hassle-free, and at your location. Our experts arrive within 45-60 minutes nationwide.
                   </p>
-                  <div className="mt-4 flex items-center text-[#8AE600]">
+                  <div className="mt-4 flex items-center text-[#25E2F4]">
                     <span className="text-sm font-semibold">24/7 AVAILABLE</span>
                   </div>
                 </div>
               </div>
 
               {/* Service 2 */}
-              <div className="group relative bg-[#1a1a1a] rounded-2xl overflow-hidden border border-[#8AE600]/40 shadow-2xl hover:shadow-[#8AE600]/30 hover:shadow-2xl transition-all duration-500 animate-slideRight">
+              <div className="group relative bg-[#1C3537] rounded-2xl overflow-hidden border border-[#25E2F4]/40 shadow-2xl hover:shadow-[#25E2F4]/30 hover:shadow-2xl transition-all duration-500 animate-slideRight">
                 <div className="absolute -right-6 -top-6 opacity-20 group-hover:opacity-30 transition-opacity">
-                  <TyreIcon className="w-32 h-32 text-[#8AE600]" />
+                  <TyreIcon className="w-32 h-32 text-[#25E2F4]" />
                 </div>
 
                 <div className="relative h-64 w-full">
@@ -164,21 +164,21 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 bg-[#8AE600] p-2 rounded-full shadow-lg">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1C3537] via-transparent to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 bg-[#25E2F4] p-2 rounded-full shadow-lg">
                     <Truck className="text-black" size={24} />
                   </div>
                 </div>
 
                 <div className="p-6 relative">
                   <h3 className="text-2xl font-bold text-white mb-3 flex items-center gap-2">
-                    <TyreIcon className="w-6 h-6 text-[#8AE600]" />
+                    <TyreIcon className="w-6 h-6 text-[#25E2F4]" />
                     TRUCK & PLANT TYRE FITTING
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
                     Rapid emergency truck & plant tyre fitting—wherever you are, whenever you need. Heavy-duty service for commercial vehicles.
                   </p>
-                  <div className="mt-4 flex items-center text-[#8AE600]">
+                  <div className="mt-4 flex items-center text-[#25E2F4]">
                     <span className="text-sm font-semibold">24/7 AVAILABLE</span>
                   </div>
                 </div>
@@ -187,7 +187,7 @@ export default function Home() {
 
             {/* Extra CTA */}
             <div className="text-center mt-12">
-              <Button className="bg-[#8AE600] hover:bg-[#72BE00] text-black font-bold px-8 py-6 rounded-full text-lg transition-all hover:scale-105 shadow-xl">
+              <Button className="bg-[#25E2F4] hover:bg-[#1BBECE] text-black font-bold px-8 py-6 rounded-full text-lg transition-all hover:scale-105 shadow-xl">
                 VIEW ALL SERVICES
               </Button>
             </div>
@@ -195,9 +195,9 @@ export default function Home() {
         </section>
 
         {/* We specialise in - with theme color background */}
-        <section className="bg-gradient-to-r from-[#8AE600]/20 to-[#8AE600]/5 py-16">
+        <section className="bg-gradient-to-r from-[#25E2F4]/20 to-[#25E2F4]/5 py-16">
           <div className="container">
-            <h2 className="text-3xl font-bold text-center text-[#8AE600] animate-fadeUp drop-shadow">
+            <h2 className="text-3xl font-bold text-center text-[#25E2F4] animate-fadeUp drop-shadow">
               We specialise in
             </h2>
             {/* You could add a grid of specialities here with icons */}
@@ -215,15 +215,15 @@ export default function Home() {
             <Car className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/40 w-24 h-24" />
           </div>
           {/* Right side: content with theme color background */}
-          <div className="bg-[#8AE600]/10 p-12 flex flex-col justify-center animate-slideRight shadow-inner">
-            <h3 className="text-2xl font-bold text-[#8AE600] mb-4 flex items-center gap-2">
-              <Award className="text-[#8AE600]" /> EMERGENCY MOBILE TYRE FITTING
+          <div className="bg-[#25E2F4]/10 p-12 flex flex-col justify-center animate-slideRight shadow-inner">
+            <h3 className="text-2xl font-bold text-[#25E2F4] mb-4 flex items-center gap-2">
+              <Award className="text-[#25E2F4]" /> EMERGENCY MOBILE TYRE FITTING
             </h3>
             <p className="text-white mb-6">
               We provide a comprehensive range of mobile tyre fitting services for your convenience.
               Our specialty is mobile tyre replacements, bringing the service right to your doorstep.
             </p>
-            <Button className="w-fit bg-[#8AE600] hover:bg-[#72BE00] text-black shadow-lg" asChild>
+            <Button className="w-fit bg-[#25E2F4] hover:bg-[#1BBECE] text-black shadow-lg" asChild>
               <a href="tel:03331234567">BOOK NOW</a>
             </Button>
           </div>
@@ -231,17 +231,17 @@ export default function Home() {
 
         <section className="grid md:grid-cols-2">
           {/* Left side: content with theme color background */}
-          <div className="bg-[#8AE600]/10 p-12 flex flex-col justify-center order-2 md:order-1 animate-slideLeft shadow-inner">
-            <h3 className="text-2xl font-bold text-[#8AE600] mb-4 flex items-center gap-2">
-              <Timer className="text-[#8AE600]" /> Rapid Response
+          <div className="bg-[#25E2F4]/10 p-12 flex flex-col justify-center order-2 md:order-1 animate-slideLeft shadow-inner">
+            <h3 className="text-2xl font-bold text-[#25E2F4] mb-4 flex items-center gap-2">
+              <Timer className="text-[#25E2F4]" /> Rapid Response
             </h3>
             <p className="text-white mb-6">
               We understand that your time is precious. That’s why we guarantee a rapid response,
               typically arriving in under 45 minutes, ensuring minimal disruption to your day.
               Choose us for roadside assistance, rest assured that your time matters – we’re here to make it count.
             </p>
-            <p className="font-semibold text-[#8AE600] mb-4">24-7 availability</p>
-            <Button className="w-fit bg-[#8AE600] hover:bg-[#72BE00] text-black shadow-lg" asChild>
+            <p className="font-semibold text-[#25E2F4] mb-4">24-7 availability</p>
+            <Button className="w-fit bg-[#25E2F4] hover:bg-[#1BBECE] text-black shadow-lg" asChild>
               <a href="tel:03331234567">BOOK NOW</a>
             </Button>
           </div>
@@ -256,16 +256,16 @@ export default function Home() {
         </section>
 
         {/* Testimonials with subtle theme background */}
-        <section className="bg-gradient-to-b from-[#8AE600]/5 to-transparent py-16">
+        <section className="bg-gradient-to-b from-[#25E2F4]/5 to-transparent py-16">
           <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12 text-[#8AE600] animate-fadeUp flex items-center justify-center gap-2 drop-shadow">
-              <Star className="text-[#8AE600]" fill="#8AE600" /> Hear from our satisfied clients
+            <h2 className="text-3xl font-bold text-center mb-12 text-[#25E2F4] animate-fadeUp flex items-center justify-center gap-2 drop-shadow">
+              <Star className="text-[#25E2F4]" fill="#25E2F4" /> Hear from our satisfied clients
             </h2>
             <TestimonialsCarousel />
           </div>
         </section>
 
-        <div className="border-t border-[#8AE600]/20" />
+        <div className="border-t border-[#25E2F4]/20" />
       </main>
       <Footer />
       <CookieConsent/>

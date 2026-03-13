@@ -37,7 +37,7 @@ export default function SpecialiseSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#8AE600] py-20 overflow-hidden"
+      className="w-full bg-[#25E2F4] py-20 overflow-hidden"
     >
       <div className="max-w-[1400px] mx-auto">
         {/* Title with fade-down animation */}
@@ -91,7 +91,7 @@ export default function SpecialiseSection() {
 
                 <a
                   href="tel:03335778247"
-                  className="inline-flex items-center gap-3 bg-[#0A0A0A] text-white px-8 py-4 font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-[#067A63] hover:shadow-lg group/btn"
+                  className="inline-flex items-center gap-3 bg-[#102122] text-white px-8 py-4 font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-[#0D6B7A] hover:shadow-lg group/btn"
                 >
                   <span>BOOK NOW</span>
                   <Phone size={18} className="opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />

@@ -47,7 +47,7 @@ const Hero = () => {
     <div className="flex justify-center">
       <a
         href="tel:03335778247"
-        className="inline-flex items-center justify-center gap-3 bg-[#8AE600] hover:bg-[#72BE00] text-black font-bold py-4 px-10 rounded-lg text-2xl transition-all duration-300 transform hover:scale-110 hover:shadow-[0_0_20px_#8AE600] animate-button shadow-lg relative overflow-hidden group"
+        className="inline-flex items-center justify-center gap-3 bg-[#25E2F4] hover:bg-[#1BBECE] text-black font-bold py-4 px-10 rounded-lg text-2xl transition-all duration-300 transform hover:scale-110 hover:shadow-[0_0_20px_#25E2F4] animate-button shadow-lg relative overflow-hidden group"
       >
         {/* Pulse overlay on hover */}
         <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-lg"></span>
@@ -55,7 +55,7 @@ const Hero = () => {
         {/* Phone icon with continuous signal wave */}
         <span className="relative">
           {/* Signal wave ring */}
-          <span className="absolute inset-0 animate-signal-wave bg-[#8AE600] rounded-full pointer-events-none"></span>
+          <span className="absolute inset-0 animate-signal-wave bg-[#25E2F4] rounded-full pointer-events-none"></span>
           {/* Actual icon */}
           <svg className="h-6 w-6 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path

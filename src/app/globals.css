@@ -11,21 +11,21 @@
   :root {
 
     /* BRAND COLORS */
-    --primary: #8AE600;
-    --primary-dark: #72BE00;
+    --primary: #25E2F4;
+    --primary-dark: #1BBECE;
 
     /* BACKGROUNDS */
-    --background: #FFFFFF;
-    --background-soft: #f5f5f5;
-    --card: #f0f0f0;
+    --background: #102122;
+    --background-soft: #132728;
+    --card: #1C3537;
 
     /* TEXT */
-    --text-primary: #111111;
-    --text-secondary: #444444;
-    --text-muted: #666666;
+    --text-primary: #e0f7fa;
+    --text-secondary: #a0c4c6;
+    --text-muted: #6a9fa3;
 
     /* BORDER */
-    --border: #e0e0e0;
+    --border: #2a4a4c;
 
   }
 
@@ -291,8 +291,8 @@ transform:translateY(0px);
 }
 
 @keyframes glow {
-  0%, 100% { filter: drop-shadow(0 0 5px rgba(138, 230, 0, 0.3)); }
-  50% { filter: drop-shadow(0 0 20px rgba(138, 230, 0, 0.6)); }
+  0%, 100% { filter: drop-shadow(0 0 5px rgba(37, 226, 244, 0.3)); }
+  50% { filter: drop-shadow(0 0 20px rgba(37, 226, 244, 0.6)); }
 }
 
 @keyframes slideUp {
@@ -355,8 +355,8 @@ transform:translateY(0px);
   }
 }
 /* Optional: Enhance button glow on hover */
-.hover\:shadow-\[0_0_20px_\#8AE600\]:hover {
-  box-shadow: 0 0 20px #8AE600;
+.hover\:shadow-\[0_0_20px_\#25E2F4\]:hover {
+  box-shadow: 0 0 20px #25E2F4;
 }
 /* Existing animations... (keep them all) */
 
